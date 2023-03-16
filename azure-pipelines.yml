@@ -17,8 +17,11 @@ steps:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
-      
-      Write-Host Get-ChildItem $(System.DefaultWorkingDirectory)
+      $childItems = Get-ChildItem $(System.DefaultWorkingDirectory)
+      # Print the child items to the console using Write-Host
+      foreach ($item in $childItems) {
+          Write-Host $item.Name
+      }
 
 
 - script: echo Hello, world!
