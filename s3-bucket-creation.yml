@@ -1,0 +1,22 @@
+---
+Parameters:
+  BucketName:
+    Type: String
+    Description: The name of the S3 model bucket to create
+    MinLength: 7
+    MaxLength: 25
+    
+  ProjectTagValue:
+    Type: String
+    Description: Project tag value is used to identify the resources corresponds to a specific project
+    MinLength: 15
+    MaxLength: 25
+
+Resources:
+  ModelBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      Tags:
+        - Key: ProjectTag
+          Value: !Ref ProjectTagValue
