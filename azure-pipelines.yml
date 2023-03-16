@@ -12,11 +12,19 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!  Get-ChildItem $(System.DefaultWorkingDirectory)
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host Get-ChildItem $(System.DefaultWorkingDirectory)
+
+
+- script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
-    Get-ChildItem $(System.DefaultWorkingDirectory)
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
