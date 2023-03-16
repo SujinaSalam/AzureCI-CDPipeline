@@ -12,7 +12,7 @@ trigger:
     templateSource: 'file'
     templateFile: 's3-bucket-creation.yml'
     templateParametersSource: 'file'
-    templateParameterFile:'ParameterFile.json'
+    templateParameterFile: 'ParameterFile.json'
 
 
 pool:
