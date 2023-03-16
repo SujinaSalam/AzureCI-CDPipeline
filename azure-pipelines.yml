@@ -5,6 +5,13 @@
 
 trigger:
 - main
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      Get-ChildItem $(System.DefaultWorkingDirectory)
+      
 - task: CloudFormationCreateOrUpdateStack@1
   inputs:
     regionName: 'ap-northeast-1'
