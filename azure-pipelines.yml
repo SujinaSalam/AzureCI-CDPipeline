@@ -6,12 +6,6 @@
 trigger:
 - main
 
-- task: PowerShell@1
-  inputs:
-    targetType: 'inline'
-    script: |
-       Write-Host Get-ChildItem $(System.DefaultWorkingDirectory)
-
 
 
 pool:
