@@ -26,7 +26,7 @@ steps:
 - task: CloudFormationCreateOrUpdateStack@1
   inputs:
     regionName: 'ap-northeast-1'
-    stackName: 'cloud_formation_stack'
+    stackName: 'cloudformationstack'
     templateSource: 'file'
     templateFile: '$(System.DefaultWorkingDirectory)/s3-bucket-creation.yml'
     templateParametersFile: '$(System.DefaultWorkingDirectory)/ParameterFile.json'
