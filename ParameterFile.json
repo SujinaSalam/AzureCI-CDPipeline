@@ -6,13 +6,5 @@
   {
     "ParameterKey": "ProjectTagValue",
     "ParameterValue": "${MY_PROJECT_TAG_VALUE}"
-  },
-  {
-    "ParameterKey": "AwsAccessKeyId",
-    "ParameterValue": "${env:AWS_ACCESS_KEY_ID}"
-  },
-  {
-    "ParameterKey": "AwsSecretAccessKey",
-    "ParameterValue": "${env:AWS_SECRET_ACCESS_KEY}"
   }
 ]
