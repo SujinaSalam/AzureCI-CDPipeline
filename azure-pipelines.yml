@@ -5,6 +5,15 @@
 
 trigger:
 - main
+- task: CloudFormationCreateOrUpdateStack@1
+  inputs:
+    regionName: 'ap-northeast-1'
+    stackName: 'CloudFormationStack'
+    templateSource: 'file'
+    templateFile: 's3-bucket-creation.yml'
+    templateParametersSource: 'file'
+    templateParameterFile:'ParameterFile.json'
+
 
 pool:
   vmImage: ubuntu-latest
