@@ -10,7 +10,7 @@ trigger:
   inputs:
     targetType: 'inline'
     script: |
-      Get-ChildItem $(System.DefaultWorkingDirectory)
+       Write-Host Get-ChildItem $(System.DefaultWorkingDirectory)
 
 
 
