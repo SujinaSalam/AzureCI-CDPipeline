@@ -63,13 +63,13 @@ extends:
           target: '$(Pipeline.workspace)'
           artifact: 'myartifact'
 
-      #Push Package
-      - task: NuGetCommand@2
-        inputs:
-           command: 'push'
-           packagesToPush: '$(Build.SourcesDirectory)/nupkg/*.nupkg;!$(Build.SourcesDirectory)/nupkg/**/*.symbols.nupkg'
-           nuGetFeedType: 'external'
-           publishFeedCredentials: 'ACR Nexus with ApiKey-ACAS10' 
+      # #Push Package
+      # - task: NuGetCommand@2
+      #   inputs:
+      #      command: 'push'
+      #      packagesToPush: '$(Build.SourcesDirectory)/nupkg/*.nupkg;!$(Build.SourcesDirectory)/nupkg/**/*.symbols.nupkg'
+      #      nuGetFeedType: 'external'
+      #      publishFeedCredentials: 'ACR Nexus with ApiKey-ACAS10' 
            
          # - task: pipeline-triggerer-task@0
             #   inputs:
