@@ -9,7 +9,7 @@ trigger:
 #ADOCS requires pipeline yaml file extending from shared template created by ADOCS team
 # You should provide parameters defined in shared template (shared-template.yml) as show below
 extends:
-  template: shared-template.yml@azureSharedTemplates #Refer to the resources section repo 1)
+  # template: shared-template.yml@azureSharedTemplates #Refer to the resources section repo 1)
   # Below are parameters needed for shared template
   parameters:
     #parameters to set build version
