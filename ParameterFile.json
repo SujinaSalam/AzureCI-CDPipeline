@@ -1,10 +1,10 @@
 [
   {
       "ParameterKey": "BucketName",
-      "ParameterValue": "${MY_BUCKET_NAME}"
+      "ParameterValue": "$(MY_BUCKET_NAME)"
   },
   {
     "ParameterKey": "ProjectTagValue",
-    "ParameterValue": "${MY_PROJECT_TAG_VALUE}"
+    "ParameterValue": "$(MY_PROJECT_TAG_VALUE)"
   }
 ]
